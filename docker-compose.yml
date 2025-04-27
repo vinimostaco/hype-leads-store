@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: meu-postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: joao
+      POSTGRES_PASSWORD: joao2504
+      POSTGRES_DB: hypeleads
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
