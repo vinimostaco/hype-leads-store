@@ -14,3 +14,12 @@ services:
 
 volumes:
   postgres_data:
+    # npx typeorm-model-generato    r \
+    # -h localhost \
+    # -p 5432 \
+    # -d hypeleads \
+    # -u joao \
+    # -x joao2504 \
+    # -e postgres \
+    # -o ./src/config/db/entity
+    # -s public \
