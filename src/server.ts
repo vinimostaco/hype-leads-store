@@ -1,9 +1,13 @@
 import app from "./app";
 import { AppDataSource } from "./config/db/datasource";
-import { env } from "./config/env/environment-validation";
 
-app.listen(env.PORT, () => {
-  AppDataSource.initialize();
-  console.log("✅ Conectado ao banco de dados");
-  console.log("🚀 Server rodando na porta 3000");
-});
+function startServer(){
+    AppDataSource.initialize()
+    console.log("database conectado com sucesso")
+
+    app.listen(3000, ()=>{
+        console.log("server rodando na 3000")
+    })
+}
+
+startServer()
